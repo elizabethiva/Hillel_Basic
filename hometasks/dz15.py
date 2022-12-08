@@ -6,7 +6,9 @@ minutes = number // 60 % 60
 minutes_str = str(minutes).zfill(2)
 seconds = number % 60
 seconds_str = str(seconds).zfill(2)
-if days % 10 == 1:
+if days >= 5 and days <= 20:
+    print(days, " дней, ", hours_str, ":", minutes_str, ":", seconds_str, sep="")
+elif days % 10 == 1:
     print(days, " день, ", hours_str, ":", minutes_str, ":", seconds_str, sep="")
 elif days % 10 >= 2 and days % 10 <= 4:
     print(days, " дня, ", hours_str, ":", minutes_str, ":", seconds_str, sep="")
